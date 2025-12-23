@@ -1,5 +1,4 @@
 
-group = 'com.evs.basic' 
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
@@ -13,19 +12,19 @@ plugins {
     id "org.beryx.jlink" version "2.25.0"
 }
 
+group = 'com.evs.basic'
+
 sourceCompatibility = '17' 
 
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
-    maven {
-        url 'https://maven.aliyun.com/nexus/content/groups/public/' 
-        url "https://nexus.gluonhq.com/nexus/content/repositories/releases/" 
-    }
+    maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
     
     jcenter() 
     // Use the plugin portal to apply community plugins in convention plugins.
     gradlePluginPortal()
+    maven { url "https://nexus.gluonhq.com/nexus/content/repositories/releases/" }
 }
 
 dependencies {
